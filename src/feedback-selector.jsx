@@ -51,7 +51,7 @@ class FeedbackSelector extends React.Component {
           onChange={this.feedbackTypeChange.bind(this)}>
         {
           feedbackKeys.map((key) => {
-            return <RadioButton style={{ width: 'auto' }} value={key} label={feedbackLabels[key]} />
+            return <RadioButton key={key} style={{ width: 'auto' }} value={key} label={feedbackLabels[key]} />
           })
         }
       </RadioButtonGroup>
