@@ -2,7 +2,7 @@ import React from 'react';
 import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
 import EditableHTML from 'corespring-editable-html';
 
-require('./feedback.less');
+require('./feedback-selector.less');
 
 class FeedbackSelector extends React.Component {
 
