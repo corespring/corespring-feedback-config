@@ -4,7 +4,7 @@ import EditableHTML from 'corespring-editable-html';
 
 require('./feedback.less');
 
-export default class FeedbackSelector extends React.Component {
+class FeedbackSelector extends React.Component {
 
   constructor(props) {
     super(props);
@@ -35,15 +35,25 @@ export default class FeedbackSelector extends React.Component {
   }
 
   render() {
+    const feedbackLabels = {
+      default: 'Simple Feedback',
+      none: 'No Feedback',
+      custom: 'Customized Feedback'
+    };
+
+    let feedbackKeys = this.props.keys === undefined ? Object.keys(feedbackLabels) : this.props.keys;
+
     return <div className="feedback-selector">
       <p className="feedback-prompt">{this.props.label}</p>
       <RadioButtonGroup 
           style={{ display: 'flex' }} name="feedback" defaultSelected="default" 
           valueSelected={this.state.feedbackType}
           onChange={this.feedbackTypeChange.bind(this)}>
-        <RadioButton style={{ width: 'auto' }} value="default" label="Simple Feedback" />
-        <RadioButton style={{ width: 'auto' }} value="none" label="No Feedback" />
-        <RadioButton style={{ width: 'auto' }} value="custom" label="Customized Feedback" />
+        {
+          feedbackKeys.map((key) => {
+            return <RadioButton style={{ width: 'auto' }} value={key} label={feedbackLabels[key]} />
+          })
+        }
       </RadioButtonGroup>
       {
         (this.state.feedbackType === 'custom') ? (
@@ -65,3 +75,5 @@ export default class FeedbackSelector extends React.Component {
   }
 
 }
+
+export default FeedbackSelector;
