@@ -59,7 +59,7 @@ class FeedbackSelector extends React.Component {
         (this.state.feedbackType === 'custom') ? (
           <div className="feedback-holder">
             <EditableHTML 
-              placeholder="Enter feedback..."
+              placeholder={this.props.placeholder || "Enter feedback..."}
               onChange={this.feedbackChange.bind(this)} 
               model={this.state.feedback}/>
           </div>
