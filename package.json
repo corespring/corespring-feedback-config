@@ -4,6 +4,7 @@
   "description": "",
   "files" : [
     "src/index.jsx",
+    "src/feedback-selector.jsx",
     "feedback.less"
   ],
   "main": "src/index.jsx",
