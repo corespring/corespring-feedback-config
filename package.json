@@ -5,7 +5,7 @@
   "files" : [
     "src/index.jsx",
     "src/feedback-selector.jsx",
-    "feedback.less"
+    "src/feedback-selector.less"
   ],
   "main": "src/index.jsx",
   "scripts": {
