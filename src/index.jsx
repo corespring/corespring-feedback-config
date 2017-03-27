@@ -1,7 +1,7 @@
 import React from 'react';
 import {merge} from 'lodash';
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
-import FeedbacSelector from './feedback-selector';
+import FeedbackSelector from './feedback-selector';
 
 export default class FeedbackConfig extends React.Component {
 
