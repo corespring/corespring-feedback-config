@@ -46,12 +46,12 @@ class FeedbackSelector extends React.Component {
     return <div className="feedback-selector">
       <p className="feedback-prompt">{this.props.label}</p>
       <RadioButtonGroup 
-          style={{ display: 'flex' }} name="feedback" defaultSelected="default" 
+          style={{ display: 'inline-block' }} name="feedback" defaultSelected="default" 
           valueSelected={this.state.feedbackType}
           onChange={this.feedbackTypeChange.bind(this)}>
         {
           feedbackKeys.map((key) => {
-            return <RadioButton key={key} style={{ width: 'auto' }} value={key} label={feedbackLabels[key]} />
+            return <RadioButton key={key} style={{ display: 'inline-block', width: 'auto' }} value={key} label={feedbackLabels[key]} />
           })
         }
       </RadioButtonGroup>
